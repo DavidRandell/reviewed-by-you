@@ -1,9 +1,9 @@
 from flask import Flask, request
-app = Flask(__name__, static_url_path='')
+application = Flask(__name__, static_url_path='')
 
-@app.route('/html/')
+@application.route('/html/')
 def root():
     return app.send_static_file('index.html')
 
 if __name__ == '__main__':
-  app.run(debug=True)
+    application.run(debug=True)
