@@ -1,6 +1,9 @@
-from flask import Flask
-application = Flask(__name__)
+from flask import Flask, request
+app = Flask(__name__, static_url_path='')
 
-@application.route('/')
-def hello_world():
-    return 'Hello World, this is deployed to Elastic Beanstalk through an AWS pipeline'
+@app.route('/html/')
+def root():
+    return app.send_static_file('index.html')
+
+if __name__ == '__main__':
+  app.run(debug=True)
