@@ -3,8 +3,10 @@ from flask import Flask, render_template, request
 application = Flask(__name__)
 app = application
 
-@application.route('/')
+@app.route('/')
+
 def index():
-    #title = "Reviewed By You"
     return render_template("index.html")
 
+if __name__ == "__main__":
+    app.run()
