@@ -13,7 +13,6 @@
 
 body {
     background-color: var(--primary-color);
-    background-color: red !important;
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
