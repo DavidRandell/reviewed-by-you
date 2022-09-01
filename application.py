@@ -8,5 +8,8 @@ app = application
 def index():
     return render_template("index.html")
 
+def movie():
+    return render_template("movie.html")
+
 if __name__ == "__main__":
     app.run()

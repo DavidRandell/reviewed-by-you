@@ -23,7 +23,7 @@ header {
     padding: 1rem;
     margin-bottom: 10px;
 }
-
+h1, h2, h3, h4, p {margin-bottom: 15px;}
 
 h1 {
     font-size: 45px;
@@ -33,9 +33,11 @@ h1 {
     margin-bottom: 10px;
  }
 
+ h1 a {color: #eee; text-decoration: none;}
+
 
  h2 {
-    font-size: 18px;
+    font-size: 24px;
     color: #eee;
     line-height: 30px;
     text-align: center;
@@ -92,6 +94,8 @@ main {
 
 }
 
+.movie-poster {margin-bottom: 20px;}
+
 .movie-info h3 {
     margin-top: 0;
 }
@@ -134,13 +138,50 @@ main {
     transform: translateY(0);
 }
 
+/* Single Movie Page */
 
-@media screen and (min-width: 700px) {
+#moviePage #main {color: #eee; line-height: 1.5rem;; padding: 1rem;}
+
+#moviePage h3.tagline {
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.movie-poster {
+    width: 100%;
+}
+
+#moviePage h4 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 4px;
+}
+
+
+@media screen and (min-width: 450px) {
+    
+    .movie-poster {
+        width: 50%;
+        float: right;
+        margin: 0 0 20px 20px;
+    }
+    #moviePage h4 {width: 47%;}
+}
+
+
+@media screen and (min-width: 768px) {
     header {
         display: flex;
         justify-content: space-between;
     }
     h1 {
         margin-bottom: 0;
+    }
+    #moviePage h2, #moviePage h3.tagline {
+        text-align: left;
+    }
+    
+    #moviePage h3.tagline {
+        display: inline-block;
     }
 }
