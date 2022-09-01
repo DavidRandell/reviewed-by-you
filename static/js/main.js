@@ -32,7 +32,7 @@ function showMovies(movies) {
     
         const movieEl = document.createElement('div')
         movieEl.classList.add('movie')
-        movieEl.innerHTML = `<a href="http://reviewed-by-you.com/templates/movie.html?${id}" class="movieLink" style="display: block;" ><img src="${IMG_PATH + poster_path}" alt="${title}" /><div class="movie-info"><h3>${title}</h3><span class="${getClassByRate(vote_average)}">${vote_average}</span></div><div class="overview"><h3>Overview</h3><p>${overview}</p></div></a>`
+        movieEl.innerHTML = `<a href="movie.html?${id}" class="movieLink" style="display: block;" ><img src="${IMG_PATH + poster_path}" alt="${title}" /><div class="movie-info"><h3>${title}</h3><span class="${getClassByRate(vote_average)}">${vote_average}</span></div><div class="overview"><h3>Overview</h3><p>${overview}</p></div></a>`
         //movieEl.innerHTML = `<a href="${SHOW_API + id}?api_key=${api_key}&language=en-US" class="movieLink" style="display: block;" ><img src="${IMG_PATH + poster_path}" alt="${title}" /></a><div class="movie-info"><h3>${title}</h3><span class="${getClassByRate(vote_average)}">${vote_average}</span></div><div class="overview"><h3>Overview</h3><p>${overview}</p></div>`
 
         main.appendChild(movieEl)
