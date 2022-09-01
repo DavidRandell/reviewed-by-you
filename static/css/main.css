@@ -1,6 +1,6 @@
 /* Main CSS Stylesheet */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;400&display=swap');
 
 :root {
     --primary-color: #22254b;
@@ -13,7 +13,7 @@
 
 body {
     background-color: var(--primary-color);
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
 }
 
@@ -37,7 +37,7 @@ h1 {
 
 
  h2 {
-    font-size: 24px;
+    font-size: 20px;
     color: #eee;
     line-height: 30px;
     text-align: center;
@@ -130,7 +130,8 @@ main {
 }
 
 .overview p {
-    line-height: 20p;
+    font-size: 13px;
+    line-height: 16px;
 }
 
 .movie:hover .overview {
