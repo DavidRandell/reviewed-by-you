@@ -1,5 +1,5 @@
 const urlArray = window.location.search.split('?');
-const movieID = urlArray[1].substring(3);
+const movieID = urlArray[1];
 
 console.log(movieID)
 
