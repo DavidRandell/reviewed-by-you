@@ -25,8 +25,8 @@ async function getMovieDetails(url) {
     const res = await fetch(url)
     const data = await res.json()
     showMovieDetails(data)
+    getReviews(movieID, data)
 }
-
 
 function showMovieDetails(movie) {
 
@@ -42,7 +42,16 @@ console.log(movie)
     movieEl.innerHTML = `<h2>${title}</h2><h3 class="tagline">"${tagline}"</h3><img src="${IMG_PATH + poster_path}" alt="${title}" class="movie-poster" /><h4>Movie Summary</h4><p>${overview}</p><p class="${getClassByRate(vote_average)}">Average Rating: ${rounded_average} (${vote_count})</p></div>`
 
     main.appendChild(movieEl)
+
     
+
+}
+
+function getReviews(id, data) {
+    console.log(id)
+    const reviewContainer = document.getElementById('reviews')
+    reviewContainer.innerHTML = `<h4 class="sectionHeading">Reviews for ${data.title}.</h4>`
+
 }
 
 function getClassByRate(vote){

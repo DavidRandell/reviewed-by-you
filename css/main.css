@@ -141,7 +141,7 @@ main {
 
 /* Single Movie Page */
 
-#moviePage #main {color: #eee; line-height: 1.5rem;; padding: 1rem;}
+#main, #reviews {color: #eee; line-height: 1.5rem;; padding: 1rem;}
 
 #moviePage h3.tagline {
     text-align: center;
@@ -157,6 +157,8 @@ main {
     border-bottom: 1px solid #eee;
     padding-bottom: 4px;
 }
+
+#reviews h4.sectionHeading { width: 100%; margin: 0 auto; color: #fff; font-weight: 700;}
 
 
 @media screen and (min-width: 450px) {
