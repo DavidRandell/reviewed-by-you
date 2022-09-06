@@ -42,9 +42,6 @@ console.log(movie)
     movieEl.innerHTML = `<h2>${title}</h2><h3 class="tagline">"${tagline}"</h3><img src="${IMG_PATH + poster_path}" alt="${title}" class="movie-poster" /><h4>Movie Summary</h4><p>${overview}</p><p class="${getClassByRate(vote_average)}">Average Rating: ${rounded_average} (${vote_count})</p></div>`
 
     main.appendChild(movieEl)
-
-    
-
 }
 
 function getReviews(id, data) {
@@ -52,7 +49,22 @@ function getReviews(id, data) {
     const reviewContainer = document.getElementById('reviews')
     reviewContainer.innerHTML = `<h4 class="sectionHeading">Reviews for ${data.title}.</h4>`
 
+    // query DB on movie ID
+
+    // reviews.forEach((movie) => {
+    //     const { id, movieID, userName, reviewTitle, reviewSubTitle, starRating, reviewText } = review 
+    
+    //     const movieEl = document.createElement('div')
+    //     movieEl.classList.add('movie')
+    //     movieEl.innerHTML = `<a href="/movie?${id}" class="movieLink" style="display: block;" ><img src="${IMG_PATH + poster_path}" alt="${title}" /><div class="movie-info"><h3>${title}</h3><span class="${getClassByRate(vote_average)}">${vote_average}</span></div><div class="overview"><h3>Overview</h3><p>${overview}</p></div></a>`
+
+    //     main.appendChild(movieEl)
+    
+    // })
+
 }
+
+
 
 function getClassByRate(vote){
     if(vote >= 8) {
