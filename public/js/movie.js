@@ -1,13 +1,12 @@
+
 const urlArray = window.location.search.split('?');
 const movieID = urlArray[1];
-
-console.log(movieID)
 
 const api_key = 'dc3959e18dc07cab7733cd17f3f2eb39'
 
 const API_URL = 'https://api.themoviedb.org/3/movie/'+movieID+'?api_key='+api_key+'&language=en-US';
 
-console.log(API_URL)
+//console.log(API_URL)
 
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280';
 
@@ -25,7 +24,7 @@ async function getMovieDetails(url) {
     const res = await fetch(url)
     const data = await res.json()
     showMovieDetails(data)
-    getReviews(movieID, data)
+    //getReviews(movieID, data)
 }
 
 function showMovieDetails(movie) {
@@ -44,26 +43,13 @@ console.log(movie)
     main.appendChild(movieEl)
 }
 
-function getReviews(id, data) {
-    console.log(id)
-    const reviewContainer = document.getElementById('reviews')
-    reviewContainer.innerHTML = `<h4 class="sectionHeading">Reviews for ${data.title}.</h4>`
+// function getReviews(id, movie) {
+//     const { title } = movie 
 
-    // query DB on movie ID
+//     const reviewContainer = document.getElementById('reviews')
+//     reviewContainer.innerHTML = `<h4 class="sectionHeading">Reviews for ${title}.</h4>`
 
-    // reviews.forEach((movie) => {
-    //     const { id, movieID, userName, reviewTitle, reviewSubTitle, starRating, reviewText } = review 
-    
-    //     const movieEl = document.createElement('div')
-    //     movieEl.classList.add('movie')
-    //     movieEl.innerHTML = `<a href="/movie?${id}" class="movieLink" style="display: block;" ><img src="${IMG_PATH + poster_path}" alt="${title}" /><div class="movie-info"><h3>${title}</h3><span class="${getClassByRate(vote_average)}">${vote_average}</span></div><div class="overview"><h3>Overview</h3><p>${overview}</p></div></a>`
-
-    //     main.appendChild(movieEl)
-    
-    // })
-
-}
-
+// }
 
 
 function getClassByRate(vote){

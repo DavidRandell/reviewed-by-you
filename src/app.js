@@ -36,6 +36,16 @@ app.get('/movie', (req, res) => {
    })
 })
 
+// Get and Dipslay Reviews
+
+// OUR MOCK ARRAY OF PROJECTS
+let reviews = [
+   { title: "Great Review", movieTitle: "Batman II" },
+   { title: "Awesome Movie", movieTitle: "Titanic" }
+ ]
+
+
+// 404 error page
 app.get('*', (req, res) => {
    res.render('404', {
       title: 'Empty Theatre, sorry!'
